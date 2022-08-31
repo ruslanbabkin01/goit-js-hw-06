@@ -29,12 +29,26 @@ function onInputChange(ev) {
   inputValue = ev.currentTarget.value;
 }
 
-function createBoxes(amount) {
-  console.log('создать');
+function addDivsOnDocument(firstDiv) {
+  refs.boxes.insertAdjacentHTML('beforeend', firstDiv);
+} 
+
+function createBoxes() {
+  let width = 30;
+  let height = 30;
+  let firstDiv = `<div width="${width}px" height="${height}px" background-color="${getRandomHexColor()}"></div>`;
+
+  for (let i = 0; i < inputValue; i+=1) {
+    width += 10;
+    height += 10;
+
+    inputValue += `<div width="${width}px" height="${height}px" background-color="${getRandomHexColor()}"></div>`;
+  }
+    addDivsOnDocument(firstDiv)
 }
 
 function destroyBoxes() {
-  
+  refs.boxes.innerHTML = '';
 }
 
-createBoxes(5);
+createBoxes(2)
