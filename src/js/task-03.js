@@ -27,9 +27,7 @@ const makeGallery = ({url, alt}) => {
 };
 
 const ulEl = document.querySelector('.gallery');
-const makeGalleryFoto = images
-  .map(makeGallery)
-  .join('');
+const makeGalleryFoto = images.map(makeGallery).join('');
 
 ulEl.insertAdjacentHTML('afterbegin', makeGalleryFoto);
 
