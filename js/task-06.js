@@ -16,8 +16,10 @@ function onInputBlur(event) {
    console.log(totalLengthInput);
 
    if (totalLength === totalLengthInput) {
+      input.classList.remove('invalid');
       input.classList.add('valid');
    } else {
       input.classList.add('invalid')
+      input.classList.remove('valid');
    }
 }

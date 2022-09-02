@@ -15,12 +15,12 @@ incrementBtn.addEventListener('click', onIncrementClick);
 
 function onDecrementClick() {
    console.log(counterValue);
-   counterValue--;
+   counterValue-=1;
    amounOfValue.textContent = counterValue;
 }
 
 function onIncrementClick() {
    console.log(counterValue);
-   counterValue++;
+   counterValue +=1;
    amounOfValue.textContent = counterValue;
 }

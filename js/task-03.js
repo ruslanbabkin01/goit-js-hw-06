@@ -30,5 +30,4 @@ const ulEl = document.querySelector('.gallery');
 const makeGalleryFoto = images.map(makeGallery).join('');
 
 ulEl.insertAdjacentHTML('afterbegin', makeGalleryFoto);
-
 console.log(makeGalleryFoto);

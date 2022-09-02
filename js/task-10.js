@@ -28,7 +28,7 @@ function onInputChange(ev) {
   inputValue = ev.currentTarget.value;
 }
 
-function createBoxes(inputValue) {
+function createBoxes() {
   let width = 30;
   let height = 30;
   let firstDiv = `<div style="width: ${width}px; height: ${height}px; background-color: ${getRandomHexColor()}"></div>`;
@@ -38,13 +38,13 @@ function createBoxes(inputValue) {
     height += 10;
 
     firstDiv += `<div style="width: ${width}px; height: ${height}px; background-color: ${getRandomHexColor()}"></div>`;
+    
+    refs.boxes.innerHTML = firstDiv;
   }
-    refs.boxes.insertAdjacentHTML('beforeend', firstDiv);
+    
 }
 
 function destroyBoxes() {
   refs.boxes.innerHTML = '';
 }
-
-createBoxes(6)
 
